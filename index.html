@@ -1,9 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather App</title>
+    <style>
+      body {
+        background: #f9f7fe;
+        margin: 10px auto;
+      }
+      #root {
+        line-height: 24px;
+        position: static;
+        font-family: "Kumbh Sans", sans-serif;
+      }
+      .app {
+        margin: 60px auto;
+        max-width: 800px;
+        line-height: 24px;
+      }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      h1 {
+        color: #212121;
+      }
+      .weather .search-input {
+        background: #f9f7fe;
+        border: none;
+        border-radius: 6px;
+        color: #27214266;
+        display: inline-block;
+        font-size: 16px;
+        height: 25px;
+        width: 65%;
+        line-height: 20px;
+        padding: 15px 20px;
+        margin: 5px;
+      }
+      .btn {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        width: 25%;
+      }
+      .weather .btn {
+        background: #6e5773;
+        color: #f9f7fe;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 700;
+        height: 54px;
+        padding: 15px 10px;
+      }
+      .btn:hover {
+        cursor: pointer;
+      }
+      .weather {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 30px 50px #41326414;
+        color: #878787;
+        padding: 40px;
+      }
+      .row {
+        max-width: 100%;
+      }
+      form {
+        border-bottom: 1px solid #f9f7fe;
+        margin-top: 40px;
+        padding-bottom: 30px;
+        color: #878787;
+      }
+      .WeatherInfo {
+        margin-top: 20px;
+      }
+      .WeatherInfo .temperature-container {
+        align-items: center;
+        margin-top: 30px;
+      }
+      .weather ul {
+        margin: 0;
+        padding: 0;
+      }
+      .weather li {
+        color: #27214266;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        list-style: none;
+        margin-bottom: 5px;
+      }
+      .weather li strong {
+        color: #ea9085;
+        font-weight: 900;
+      }
+      div.temperature-container {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 10px;
+        flex: 0 0 auto;
+        align-items: center;
+        top: -120px;
+        position: relative;
+      }
+      .material-symbols-outlined {
+        line-height: 24px;
+        margin: 10px auto;
+        color: black;
+        width: 52;
+        height: 52;
+        font-size: 70px;
+      }
+      .temperature {
+        color: #212121;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 1;
+        margin-left: 10px;
+      }
+      .unit {
+        color: #212121;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1;
+        position: relative;
+        top: -34px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div id="root">
+      <div class="app">
+        <div class="container">
+          <div class="weather">
+            <div class="row">
+              <form id="search-form">
+                <input
+                  type="text"
+                  placeholder="Enter a City"
+                  class="search-input"
+                  id="search-form-input"
+                />
+                <input class="btn" type="submit" value="Search" />
+              </form>
+            </div>
+            <div class="WeatherInfo">
+              <div class="row">
+                <h1 id="searched-city">Edinburgh</h1>
+                <ul>
+                  <li><span id="time"> Sunday 20:14</span>, cloudy</li>
+                  <li>
+                    Humidity: <strong>91%</strong>, Wind:
+                    <strong>11m/h</strong>
+                  </li>
+                </ul>
+                <div class="temperature-container">
+                  <span class="temperature"
+                    ><span class="material-symbols-outlined"> cloud </span class="displayCurrentTemp">
+                    43<span class="unit">°F</span></span
+                  >
+                </div>
+              </div>
+            </div>
+            <footer>
+              This project was coded by
+              <a
+                href="https://www.shecodes.io/graduates/117675-mackenzie-baird"
+                target="_blank"
+                >Mackenzie Baird</a
+              >
+              and is on GitHub and hosted on Netlify
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js">
+      import axios from "axios";
+    </script>
+  </body>
 </html>
