@@ -87,7 +87,11 @@ form {
   list-style: none;
   margin-bottom: 5px;
 }
-.weather li strong {
+.windSpeed {
+  color: #ea9085;
+  font-weight: 900;
+}
+.humidityPercentage {
   color: #ea9085;
   font-weight: 900;
 }

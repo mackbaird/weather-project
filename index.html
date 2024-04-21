@@ -10,7 +10,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,28 +37,43 @@
               <div class="row">
                 <h1 id="searched-city">Edinburgh</h1>
                 <ul>
-                  <li><span id="time"> Sunday 20:14</span>, cloudy</li>
                   <li>
-                    Humidity: <strong>91%</strong>, Wind:
-                    <strong>11m/h</strong>
+                    <span id="time"> Sunday 20:14</span>,
+                    <span class="weatherCondition">cloudy</span>
+                  </li>
+                  <li>
+                    Humidity:
+                    <span class="humidityPercentage"><strong>91%</strong></span
+                    >, Wind:
+                    <span class="windSpeed"><strong>11m/h</strong></span>
                   </li>
                 </ul>
                 <div class="temperature-container">
                   <span class="temperature"
-                    ><span class="material-symbols-outlined"> cloud </span class="displayCurrentTemp">
-                    43<span class="unit">°F</span></span
+                    ><span class="material-symbols-outlined"> cloud </span>
+                    <span class="displayTemp"> 43</span
+                    ><span class="unit">°F</span></span
                   >
                 </div>
               </div>
             </div>
             <footer>
               This project was coded by
-              <a
-                href="https://github.com/mackbaird"
-                target="_blank"
+              <a href="https://github.com/mackbaird" target="_blank"
                 >Mackenzie Baird</a
               >
-              and is on <a href="https://github.com/mackbaird/weather-project" target="_blank">GitHub</a> and hosted on <a href="https://mackenzies-weather-app.netlify.app/" target="_blank">Netlify</a>
+              and is on
+              <a
+                href="https://github.com/mackbaird/weather-project"
+                target="_blank"
+                >GitHub</a
+              >
+              and hosted on
+              <a
+                href="https://mackenzies-weather-app.netlify.app/"
+                target="_blank"
+                >Netlify</a
+              >
             </footer>
           </div>
         </div>
