@@ -64,12 +64,13 @@ h1 {
 }
 form {
   border-bottom: 1px solid #f9f7fe;
-  margin-top: 40px;
+  margin-top: 10px;
   padding-bottom: 30px;
   color: #878787;
 }
 .WeatherInfo {
   margin-top: 20px;
+  height: 125px;
 }
 .WeatherInfo .temperature-container {
   align-items: center;
@@ -126,4 +127,20 @@ div.temperature-container {
   line-height: 1;
   position: relative;
   top: -34px;
+}
+.weather-forecast {
+  margin: 10 auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.forecast-date {
+  font-weight: 750;
+  color: #212121;
+}
+.forecast-temps {
+  color: #ea9085;
+}
+footer {
+  margin-top: 25px;
 }
